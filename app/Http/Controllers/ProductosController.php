@@ -64,12 +64,19 @@ class ProductosController extends Controller
                 'message' => 'Se ha presentado un error, intente más tarde.'
             ], 500);
         }
-    }    
+    }
 
     public function datatable(Request $request)
     {
         //Obtener lista de productos y mostrarlo en datatable
-        $users = $this->productosService->getProductoList($request);
+        $users = $this->productosService->getDatatable($request);
+        return response()->json($users);
+    }
+
+    public function list()
+    {
+        //Obtener lista de productos disponibles y mostrarlo en formulario
+        $users = $this->productosService->getList();
         return response()->json($users);
     }
 }

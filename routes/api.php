@@ -46,4 +46,5 @@ Route::group(array('prefix' => 'productos', 'middleware' => ['oauth_private']), 
     Route::get('edit/{id}', [ProductosController::class, 'edit']);
     Route::put('update/{id}', [ProductosController::class, 'update']);
     Route::post('datatable', [ProductosController::class, 'datatable']);
+    Route::get('list', [ProductosController::class, 'list']);
 });

@@ -102,7 +102,7 @@ class UserService implements UserServiceInterface
         return $this->userRepository->edit($id);
     }
 
-    public function getUserList($data)
+    public function getDatatable($data)
     {
         if (isset($data["rol_id"]) && $data["rol_id"] != "") {
             return $this->userRepository->getAllByRol($data["rol_id"]);

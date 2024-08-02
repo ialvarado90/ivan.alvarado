@@ -67,7 +67,7 @@
 					"response": []
 				},
 				{
-					"name": "List",
+					"name": "Datatable",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -583,7 +583,7 @@
 					"response": []
 				},
 				{
-					"name": "List",
+					"name": "Datatable",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -616,6 +616,41 @@
 							"path": [
 								"productos",
 								"datatable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{SERVER}}/productos/list",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"productos",
+								"list"
 							]
 						}
 					},
@@ -780,7 +815,7 @@
 					"response": []
 				},
 				{
-					"name": "List",
+					"name": "Datatable",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -851,7 +886,7 @@
 		},
 		{
 			"key": "TOKEN",
-			"value": "19e96cdae1fe0a9c2d86ee0231bc0b1d1a91b14e541",
+			"value": "b0bda405458f179f34d467041dd6dc9c5dedbae00c1",
 			"type": "string"
 		}
 	]

@@ -12,5 +12,5 @@ interface UserServiceInterface
     public function update(User $user, $data);
     public function edit($id);
     public function changePass(User $user, $data);
-    public function getUserList($data);
+    public function getDatatable($data);
 }

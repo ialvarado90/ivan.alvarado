@@ -102,7 +102,7 @@ class PedidosController extends Controller
     public function datatable(Request $request)
     {
         //Obtener lista de pedidos/detalle y mostrarlo en el datatable
-        $pedidos = $this->pedidosService->getPedidosList($request);
+        $pedidos = $this->pedidosService->getDatatable($request);
         return response()->json($pedidos);
     }
 }

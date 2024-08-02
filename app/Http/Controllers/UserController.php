@@ -131,7 +131,7 @@ class UserController extends Controller
     public function datatable(Request $request)
     {
         //Obtener lista de usuarios y mostrarlo en el datatable
-        $users = $this->userService->getUserList($request);
+        $users = $this->userService->getDatatable($request);
         return response()->json($users);
     }
 }

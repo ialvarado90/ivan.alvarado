@@ -9,5 +9,5 @@ interface PedidosServiceInterface
     public function store($data);
     public function changeState(Pedidos $pedidos, $data);
     public function edit($id);
-    public function getPedidosList($data);
+    public function getDatatable($data);
 }

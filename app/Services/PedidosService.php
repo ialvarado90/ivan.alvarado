@@ -74,7 +74,7 @@ class PedidosService implements PedidosServiceInterface
         return $this->pedidosRepository->edit($id);
     }
 
-    public function getPedidosList($request)
+    public function getDatatable($request)
     {
         $data = array();
         if (isset($request["nro_pedido"]) && $request["nro_pedido"] != "") {

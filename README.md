@@ -80,3 +80,36 @@ Las siguientes tablas deben tener obligatoriamente los siguientes valores y id's
         </tr>
     </tbody>
 </table>
+
+## Api's 
+
+### ***Usuarios***
+- POST login : enviar de formulario para iniciar sesión a aplicación
+
+##### Token required:
+- GET create : Precarga de campos para formulario, combo para seleccionar Rol
+- POST store : Envío de formulario y registro de Usuarios
+- GET edit : Precarga de formulario con datos del registro y combo de Rol
+- PUT update : Envío de formulario para actualizar datos de usuario
+- POST changePass : Envío de formulario para actualizar password de usuario logueado
+- POST datatable : Listado de usuarios registrados, se envía también datos de formulario para filtrar resultados
+- POST logout : Cerrar sesión
+
+&nbsp;
+
+### ***Productos***
+##### Token required:
+- POST store : Envío de formulario y registro de Productos.
+- GET edit : Precarga de formulario con datos del registro.
+- PUT update : Envío de formulario para actualizar datos de Producto.
+- POST datatable : Listado de productos registrados, se envía también datos de formulario para filtrar resultados.
+- GET list : Lista de productos para ser mostrados en formulario.
+
+&nbsp;
+
+### ***Pedidos***
+##### Token required:
+- POST store : Envío de formulario y registro de Productos.
+- GET edit : Precarga de formulario con datos del registro.
+- PUT changeState : Envío de formulario para actualizar estado del pedido.
+- POST datatable : Listado de pedidos registrados para ser mostrados en datatable. Se envía también datos de formulario para filtrar resultados.

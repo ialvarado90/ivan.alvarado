@@ -47,12 +47,17 @@ class ProductosService implements ProductosServiceInterface
         return $this->productosRepository->edit($id);
     }
 
-    public function getProductoList($data)
+    public function getDatatable($data)
     {
         if (isset($data["search"]) && $data["search"] != "") {
             return $this->productosRepository->getAllByFilter($data["search"]);
         } else {
             return $this->productosRepository->getAll();
         }
+    }
+
+    public function getList()
+    {
+        return $this->productosRepository->getAll();
     }
 }
