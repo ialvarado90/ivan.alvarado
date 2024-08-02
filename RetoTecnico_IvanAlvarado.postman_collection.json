@@ -1,0 +1,858 @@
+{
+	"info": {
+		"_postman_id": "498498e0-69dc-4a40-aa26-62abc1b0875d",
+		"name": "RetoTecnico_IvanAlvarado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7263184"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/user/create",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/user/edit/1",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"user",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "rol_id",
+									"value": "4",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/user/datatable",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"user",
+								"datatable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cod",
+									"value": "003",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "ivan",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ivan@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "telefono",
+									"value": "999999900",
+									"type": "text"
+								},
+								{
+									"key": "puesto",
+									"value": "Empleo",
+									"type": "text"
+								},
+								{
+									"key": "rol_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abc123def",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/user/store",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"user",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{SERVER}}/logout",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cod",
+									"value": "00333",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "ivan alvarado",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ivan.alvarado@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "telefono",
+									"value": "99990000",
+									"type": "text"
+								},
+								{
+									"key": "puesto",
+									"value": "Empleado",
+									"type": "text"
+								},
+								{
+									"key": "rol_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/user/update/6",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangePass",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "password",
+									"value": "abc123defg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/user/change-pass",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"user",
+								"change-pass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						},
+						"followOriginalHttpMethod": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "encargado@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abc123def",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/login",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/productos/edit/1",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"productos",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "sku",
+									"value": "00022",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Crema hidratante",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "hidratante",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "cuidados, tratamiento",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10.5",
+									"type": "text"
+								},
+								{
+									"key": "unidad",
+									"value": "ml",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/productos/store",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"productos",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Crema hidratante manos",
+									"type": "text"
+								},
+								{
+									"key": "sku",
+									"value": "000222",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "hidratante piel",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "cuidados, tratamiento, piel",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12.5",
+									"type": "text"
+								},
+								{
+									"key": "unidad",
+									"value": "l",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/productos/update/1",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"productos",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "search",
+									"value": "00022",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/productos/datatable",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"productos",
+								"datatable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Store",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nro_pedido",
+									"value": "00022",
+									"type": "text"
+								},
+								{
+									"key": "producto_id[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "producto_id[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "cantidad[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "cantidad[]",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/pedidos/store",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"pedidos",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeState",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "estado_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "repartidor_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/pedidos/change-state/1",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"pedidos",
+								"change-state",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SERVER}}/pedidos/edit/1",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"pedidos",
+								"edit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nro_pedido",
+									"value": "00027",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{SERVER}}/pedidos/datatable",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"pedidos",
+								"datatable"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SERVER",
+			"value": "http://reto_tecnico.test/api",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "19e96cdae1fe0a9c2d86ee0231bc0b1d1a91b14e541",
+			"type": "string"
+		}
+	]
+}
